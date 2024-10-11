@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 210 100% 20%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.3rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.header, .footer {
+  background-color: #003366;
+  color: white;
+}
+
+.workflow-step {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.workflow-step:hover {
+  @apply shadow-sm;
+}
+
+.glass-effect {
+  @apply bg-opacity-90 backdrop-filter backdrop-blur-sm;
+}
+
+.compact-input {
+  @apply h-7 text-xs py-1 px-2;
+}
+
+.compact-select {
+  @apply h-7 text-xs;
+}
+
+.compact-button {
+  @apply h-7 text-xs px-2 py-1;
+}
